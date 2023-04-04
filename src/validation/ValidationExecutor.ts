@@ -55,8 +55,8 @@ export class ValidationExecutor {
     const strictGroups = (this.validatorOptions && this.validatorOptions.strictGroups) || false;
     const always = (this.validatorOptions && this.validatorOptions.always) || false;
     /** Forbid unknown values are turned on by default and any other value than false will enable it. */
-    const forbidUnknownValues =
-      this.validatorOptions?.forbidUnknownValues === undefined || this.validatorOptions.forbidUnknownValues !== false;
+    const forbidUnknownValues = false; /* bug */
+      //this.validatorOptions?.forbidUnknownValues === undefined || this.validatorOptions.forbidUnknownValues !== false;
 
     const targetMetadatas = this.metadataStorage.getTargetValidationMetadatas(
       object.constructor,
